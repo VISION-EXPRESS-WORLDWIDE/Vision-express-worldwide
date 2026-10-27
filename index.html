@@ -1,157 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vision Express Worldwide offers domestic and international courier and cargo services from Sector 18, Gurgaon, Haryana.">
-  <title>Vision Express Worldwide | Courier & Cargo</title>
-  <style>
-    :root{--navy:#082c67;--blue:#0866c6;--sky:#eaf4ff;--yellow:#ffd43b;--ink:#102342;--muted:#5e6d82;--white:#fff}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55;background:#f7faff}
-    a{color:inherit;text-decoration:none}
-    .topbar{background:#061d45;color:#fff;padding:9px 5%;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    header{background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 3px 16px #082c6712}
-    .nav{max-width:1180px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:11px;font-weight:900;color:var(--navy);font-size:21px;line-height:1.05}
-    .logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#0b78d0,#06265d);color:white;display:grid;place-items:center;font-weight:900;font-size:21px;box-shadow:0 7px 16px #0866c633}
-    .brand small{display:block;font-size:11px;letter-spacing:2px;color:#5a6e8b;margin-top:5px}
-    nav{display:flex;gap:24px;align-items:center;font-size:14px;font-weight:700}
-    nav a:hover{color:var(--blue)} .nav-cta,.btn{background:var(--yellow);color:#102342;padding:12px 18px;border-radius:10px;font-weight:800;display:inline-block}
-    .hero{overflow:hidden;background:radial-gradient(circle at 80% 30%,#1a76ce 0,#0a4d9a 25%,#06275c 68%);color:#fff}
-    .hero-inner{max-width:1180px;margin:auto;padding:76px 22px 70px;display:grid;grid-template-columns:1.12fr .88fr;gap:38px;align-items:center}
-    .eyebrow{display:inline-block;background:#ffffff1c;border:1px solid #ffffff45;padding:7px 12px;border-radius:30px;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;font-weight:800}
-    h1{font-size:clamp(38px,5.4vw,64px);line-height:1.04;margin:20px 0 17px;letter-spacing:-1.7px}
-    h1 span{color:var(--yellow)} .hero p{font-size:18px;color:#e3efff;max-width:590px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}
-    .btn-outline{border:1px solid #ffffff8a;color:white;padding:11px 17px;border-radius:10px;font-weight:800;display:inline-block}
-    .hero-art{position:relative;min-height:320px;display:grid;place-items:center}
-    .globe{width:min(320px,75vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 25%,#9fe1ff,#2b8fe2 35%,#07509c 70%);border:8px solid #ffffff32;box-shadow:0 0 0 22px #ffffff0b,0 25px 60px #001b45aa;display:grid;place-items:center;font-size:100px}
-    .float-card{position:absolute;background:#fff;color:var(--navy);padding:13px 16px;border-radius:14px;box-shadow:0 15px 35px #001b4555;font-weight:800}
-    .float-card small{display:block;color:var(--muted);font-size:11px;font-weight:600}
-    .fc1{top:20px;left:0}.fc2{bottom:24px;right:0}
-    section{padding:70px 22px}.wrap{max-width:1180px;margin:auto}
-    .section-head{text-align:center;max-width:720px;margin:0 auto 35px}
-    .section-head .kicker{color:var(--blue);font-size:12px;letter-spacing:2px;font-weight:900;text-transform:uppercase}
-    h2{font-size:clamp(28px,4vw,42px);line-height:1.13;color:var(--navy);margin:10px 0}
-    .section-head p{color:var(--muted);margin:0}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:#fff;border:1px solid #e1eaf5;border-radius:18px;padding:24px;box-shadow:0 9px 30px #082c6709}
-    .icon{width:48px;height:48px;border-radius:14px;background:var(--sky);display:grid;place-items:center;font-size:25px;margin-bottom:15px}
-    .card h3{color:var(--navy);margin:0 0 8px;font-size:19px}.card p{color:var(--muted);font-size:14px;margin:0}
-    .band{background:#eaf4ff}
-    .split{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}
-    .checklist{list-style:none;padding:0;margin:22px 0}
-    .checklist li{margin:11px 0;color:#32445e}.checklist li:before{content:"✓";color:#0877d4;font-weight:900;margin-right:10px}
-    .partner-box{background:#fff;border:1px solid #dbe8f8;border-radius:20px;padding:25px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-    .partner{padding:12px 16px;border:1px solid #e2eaf5;border-radius:10px;color:#173c72;font-weight:900;background:#fbfdff;min-width:110px;text-align:center}
-    .notice{font-size:12px;color:#6b7890;text-align:center;margin-top:15px}
-    .contact{background:linear-gradient(135deg,#07265a,#0b60b8);color:white}
-    .contact h2{color:white}.contact .section-head p{color:#d6e8ff}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-    .contact-card{background:#ffffff12;border:1px solid #ffffff2c;border-radius:18px;padding:25px}
-    .contact-card h3{margin-top:0}.contact-line{margin:13px 0;color:#e4efff;overflow-wrap:anywhere}
-    .contact-line strong{color:var(--yellow);display:block;font-size:12px;text-transform:uppercase;letter-spacing:1px}
-    .contact-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-    .contact .btn-outline{border-color:#ffffff70}
-    footer{background:#041735;color:#cbd9ed;padding:24px 22px;font-size:13px}
-    .foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    @media(max-width:820px){nav{display:none}.hero-inner,.split,.contact-grid{grid-template-columns:1fr}.hero-inner{padding-top:54px}.hero-art{min-height:280px}.grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:540px){.grid{grid-template-columns:1fr}.topbar{justify-content:center;text-align:center}.brand{font-size:17px}.logo{width:42px;height:42px}.hero p{font-size:16px}section{padding:52px 18px}.fc1{left:0}.fc2{right:0}.float-card{font-size:13px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Vision Express Worldwide — domestic and international courier, cargo and logistics support in Sector 18, Gurgaon, Haryana.">
+<title>Vision Express Worldwide | Courier & Cargo</title>
+<style>
+:root{--navy:#082b63;--blue:#0866c6;--blue2:#0d78d5;--yellow:#ffd43b;--ink:#132744;--muted:#61718a;--pale:#eef6ff;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.55;color:var(--ink);background:#f7faff}a{text-decoration:none;color:inherit}
+.topbar{background:#061d45;color:white;padding:9px 5%;font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:#fff;box-shadow:0 4px 20px #082c6714}.nav{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--navy);font-size:20px;font-weight:900;line-height:1.05}.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#1487df,#06265d);display:grid;place-items:center;color:white;font-size:19px;box-shadow:0 7px 16px #0866c633}.brand small{display:block;font-size:10px;letter-spacing:2px;color:#63738d;margin-top:5px}
+nav{display:flex;gap:17px;font-size:13px;font-weight:800}nav a:hover{color:var(--blue)}.btn,.navcta{border:0;display:inline-block;border-radius:11px;padding:13px 18px;background:var(--yellow);color:#132744;font-weight:900;cursor:pointer}.outline{background:transparent;color:white;border:1px solid #ffffff80}.hero{color:white;background:radial-gradient(circle at 80% 30%,#1a76ce 0,#0a4d9a 27%,#06275c 72%);overflow:hidden}.hero-inner{max-width:1180px;margin:auto;padding:68px 22px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}.eyebrow{display:inline-block;border:1px solid #ffffff50;background:#ffffff19;border-radius:30px;padding:7px 13px;font-size:12px;font-weight:900;letter-spacing:1.5px}h1{font-size:clamp(38px,5.5vw,64px);line-height:1.04;letter-spacing:-1.5px;margin:20px 0}h1 span{color:var(--yellow)}.hero p{font-size:18px;color:#e3efff;max-width:600px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.art{min-height:300px;display:grid;place-items:center;position:relative}.globe{width:min(300px,70vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-size:100px;background:radial-gradient(circle at 30% 25%,#a6e5ff,#2b8fe2 38%,#07509c 75%);border:8px solid #ffffff32;box-shadow:0 0 0 22px #ffffff0b,0 25px 60px #001b45aa}.float{position:absolute;background:white;color:var(--navy);padding:12px 15px;border-radius:13px;font-weight:900;box-shadow:0 15px 35px #001b4555}.float small{display:block;color:var(--muted);font-size:11px}.f1{top:18px;left:0}.f2{bottom:22px;right:0}
+section{padding:66px 22px}.wrap{max-width:1180px;margin:auto}.head{text-align:center;max-width:730px;margin:0 auto 30px}.kicker{color:var(--blue);font-size:12px;letter-spacing:2px;font-weight:900;text-transform:uppercase}h2{color:var(--navy);font-size:clamp(28px,4vw,41px);line-height:1.15;margin:9px 0 12px}.head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:white;border:1px solid #e0eaf6;border-radius:18px;padding:23px;box-shadow:0 9px 30px #082c6708}.icon{width:47px;height:47px;display:grid;place-items:center;background:var(--pale);border-radius:14px;font-size:24px;margin-bottom:13px}.card h3{color:var(--navy);margin:0 0 8px}.card p{color:var(--muted);font-size:14px;margin:0}
+.pale{background:#eaf4ff}.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.panel{background:white;border:1px solid #dce8f7;border-radius:20px;padding:25px;box-shadow:0 12px 30px #082c670a}.panel h3{color:var(--navy);font-size:23px;margin:0 0 7px}.panel .intro{font-size:14px;color:var(--muted);margin:0 0 18px}.field{margin:13px 0}.field label{display:block;font-size:13px;font-weight:800;margin-bottom:6px;color:#263d5e}.field input,.field select,.field textarea{width:100%;border:1px solid #ccd9e9;border-radius:10px;background:#fff;padding:12px 13px;font:inherit;font-size:15px;color:var(--ink)}.field textarea{min-height:90px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid #9ccfff;border-color:var(--blue)}.formnote{font-size:12px;color:var(--muted);margin:12px 0 0}.full{width:100%;text-align:center}.partners{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.partner{background:white;border:1px solid #dfe9f6;border-radius:10px;padding:11px 15px;min-width:100px;text-align:center;font-weight:900;color:#173c72}.contact{background:linear-gradient(135deg,#07265a,#0b60b8);color:white}.contact h2{color:white}.contact .head p{color:#d6e8ff}.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contactbox{background:#ffffff12;border:1px solid #ffffff30;border-radius:18px;padding:24px}.line{margin:13px 0;overflow-wrap:anywhere}.line strong{display:block;color:var(--yellow);font-size:12px;letter-spacing:1px;text-transform:uppercase}.contact .outline{color:white}footer{background:#041735;color:#cbd9ed;padding:23px 22px;font-size:13px}.foot{max-width:1180px;margin:auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.tiny{font-size:12px;color:#d5e5f8;margin-top:13px}
+@media(max-width:850px){nav{display:none}.hero-inner,.two,.contactgrid{grid-template-columns:1fr}.hero-inner{padding-top:52px}.art{min-height:270px}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.grid{grid-template-columns:1fr}.topbar{justify-content:center;text-align:center}.brand{font-size:16px}.logo{width:42px;height:42px}.hero p{font-size:16px}section{padding:48px 17px}.float{font-size:13px}.panel{padding:20px}}
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <span>📍 Sector 18, Gurgaon, Haryana</span>
-    <span>📞 <a href="tel:+918750665836">+91 87506 65836</a> &nbsp; | &nbsp; ✉ <a href="mailto:visionexpressworldwide@gmail.com">visionexpressworldwide@gmail.com</a></span>
-  </div>
-  <header>
-    <div class="nav">
-      <a class="brand" href="#home"><span class="logo">VE✈</span><span>VISION EXPRESS<small>WORLDWIDE</small></span></a>
-      <nav><a href="#services">Services</a><a href="#partners">Our Partners</a><a href="#about">Why Choose Us</a><a href="#contact">Contact</a></nav>
-      <a class="nav-cta" href="https://wa.me/918750665836?text=Hello%20Vision%20Express%20Worldwide%2C%20I%20need%20courier%20service." target="_blank" rel="noopener">Get a Quote ↗</a>
-    </div>
-  </header>
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-inner">
-        <div>
-          <span class="eyebrow">Courier • Cargo • Logistics</span>
-          <h1>Your Parcel.<br><span>Our Priority.</span></h1>
-          <p>Domestic and international courier & cargo services to help your documents, parcels and shipments move with confidence.</p>
-          <div class="actions">
-            <a class="btn" href="https://wa.me/918750665836?text=Hello%2C%20please%20share%20courier%20rates." target="_blank" rel="noopener">Request a Quote</a>
-            <a class="btn-outline" href="#services">Explore Services ↓</a>
-          </div>
-        </div>
-        <div class="hero-art" aria-label="Worldwide shipping illustration">
-          <div class="globe">🌐</div>
-          <div class="float-card fc1">✈️ Air Cargo<small>Domestic & International</small></div>
-          <div class="float-card fc2">📦 Safe Shipping<small>Documents • Parcels • Cargo</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="wrap">
-        <div class="section-head"><div class="kicker">What we do</div><h2>Shipping made simpler</h2><p>Courier and cargo support for individuals, families, online sellers and businesses.</p></div>
-        <div class="grid">
-          <article class="card"><div class="icon">📦</div><h3>Domestic Courier</h3><p>Send documents, parcels and packages across India, subject to service availability.</p></article>
-          <article class="card"><div class="icon">🌍</div><h3>International Courier</h3><p>International shipping support for documents and parcels to eligible destinations.</p></article>
-          <article class="card"><div class="icon">🚢</div><h3>Air & Sea Cargo</h3><p>Cargo options for suitable shipments. Contact us to discuss weight, size and destination.</p></article>
-          <article class="card"><div class="icon">🚚</div><h3>Express Delivery</h3><p>Explore available express services and estimated delivery timelines for your shipment.</p></article>
-          <article class="card"><div class="icon">🔎</div><h3>Tracking Assistance</h3><p>Need help checking a shipment? Contact us with your courier and tracking details.</p></article>
-          <article class="card"><div class="icon">🧾</div><h3>Business Shipments</h3><p>Ask us about recurring shipping needs for offices, sellers and small businesses.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="band" id="about">
-      <div class="wrap split">
-        <div><div class="kicker" style="color:#0866c6;font-weight:900;letter-spacing:2px;font-size:12px">WHY VISION EXPRESS</div><h2>Every shipment deserves attention.</h2><p style="color:#5e6d82">Our goal is to make sending parcels and cargo easier with clear communication and helpful service.</p>
-          <ul class="checklist"><li>Domestic and international shipping options</li><li>Support choosing a suitable courier partner</li><li>Assistance with shipment and tracking questions</li><li>Service for personal and business shipping needs</li></ul>
-          <a class="nav-cta" href="#contact">Talk to our team</a>
-        </div>
-        <div class="partner-box" aria-label="Courier partner names">
-          <div class="partner">DHL</div><div class="partner">FedEx</div><div class="partner">Aramex</div><div class="partner">Blue Dart</div><div class="partner">Delhivery</div><div class="partner">DTDC</div><div class="partner">Trackon</div><div class="partner">The Professional</div><div class="partner">Shree Maruti</div><div class="partner">And others</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="partners">
-      <div class="wrap">
-        <div class="section-head"><div class="kicker">Our network</div><h2>Affiliated courier partners</h2><p>Partner availability can vary by route, shipment type and service terms. Contact us to confirm the best option for your parcel.</p></div>
-        <div class="partner-box">
-          <div class="partner">DHL</div><div class="partner">FedEx</div><div class="partner">Aramex</div><div class="partner">Blue Dart</div><div class="partner">Delhivery</div><div class="partner">DTDC</div><div class="partner">Trackon</div><div class="partner">The Professional</div><div class="partner">Shree Maruti</div><div class="partner">And All Other Available Partners</div>
-        </div>
-        <p class="notice">Partner names are shown for informational purposes. Use of any third-party trademarks does not imply endorsement.</p>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <div class="section-head"><div class="kicker" style="color:#ffd43b">Get in touch</div><h2>Let’s move your shipment.</h2><p>Contact us for service availability, rates and shipment guidance.</p></div>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Contact Details</h3>
-            <div class="contact-line"><strong>Contact Person</strong>Robin Mishra</div>
-            <div class="contact-line"><strong>Mobile Number</strong><a href="tel:+918750665836">+91 87506 65836</a></div>
-            <div class="contact-line"><strong>Email</strong><a href="mailto:visionexpressworldwide@gmail.com">visionexpressworldwide@gmail.com</a></div>
-            <div class="contact-line"><strong>Address</strong>Sector 18, Gurgaon, Haryana</div>
-            <div class="contact-buttons"><a class="btn" href="https://wa.me/918750665836?text=Hello%20Vision%20Express%20Worldwide" target="_blank" rel="noopener">WhatsApp Us</a><a class="btn-outline" href="tel:+918750665836">Call Now</a></div>
-          </div>
-          <div class="contact-card">
-            <h3>Business Information</h3>
-            <div class="contact-line"><strong>Business Name</strong>Vision Express Worldwide</div>
-            <div class="contact-line"><strong>GSTIN</strong>06HFDPD4132K1ZM</div>
-            <div class="contact-line"><strong>Service</strong>Domestic & International Courier Cargo</div>
-            <p style="color:#d6e8ff;font-size:13px;margin-top:20px">For a quick enquiry, share your pickup location, destination, approximate parcel weight and dimensions. Please do not send sensitive identity documents over public channels unless required and secure.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer><div class="foot"><span>© <span id="year"></span> Vision Express Worldwide. All rights reserved.</span><span>Courier • Cargo • Logistics</span></div></footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
+<div class="topbar"><span>📍 Sector 18, Gurgaon, Haryana</span><span>📞 <a href="tel:+918750665836">+91 87506 65836</a> &nbsp; | &nbsp; ✉ <a href="mailto:visionexpressworldwide@gmail.com">visionexpressworldwide@gmail.com</a></span></div>
+<header><div class="nav">
+<a class="brand" href="#home"><span class="logo">VE✈</span><span>VISION EXPRESS<small>WORLDWIDE</small></span></a>
+<nav><a href="#services">Services</a><a href="#booking">Book Courier</a><a href="#tracking">Track Shipment</a><a href="#partners">Partners</a><a href="#contact">Contact</a></nav>
+<a class="navcta" href="#booking">Get a Quote ↗</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="hero-inner"><div><span class="eyebrow">COURIER • CARGO • LOGISTICS</span><h1>Your Parcel.<br><span>Our Priority.</span></h1><p>Domestic and international courier and cargo services for documents, parcels and shipments—with helpful support from enquiry to dispatch.</p><div class="actions"><a class="btn" href="#booking">Book / Request a Quote</a><a class="btn outline" href="#tracking">Track a Shipment ↓</a></div></div><div class="art"><div class="globe">🌐</div><div class="float f1">✈️ Air Cargo<small>Domestic & International</small></div><div class="float f2">📦 Shipping Support<small>Documents • Parcels • Cargo</small></div></div></div></section>
+<section id="services"><div class="wrap"><div class="head"><div class="kicker">What we do</div><h2>Shipping made simpler</h2><p>Courier and cargo support for individuals, families, online sellers and businesses.</p></div><div class="grid">
+<article class="card"><div class="icon">📦</div><h3>Domestic Courier</h3><p>Send parcels and documents across India, subject to route and service availability.</p></article>
+<article class="card"><div class="icon">🌍</div><h3>International Courier</h3><p>Shipping support for eligible destinations. Rates and paperwork depend on shipment details.</p></article>
+<article class="card"><div class="icon">✈️</div><h3>Air & Cargo</h3><p>Discuss cargo options, dimensions, weight and destination with our team.</p></article>
+<article class="card"><div class="icon">⚡</div><h3>Express Services</h3><p>Ask about available express options and estimated delivery timelines.</p></article>
+<article class="card"><div class="icon">🔎</div><h3>Tracking Assistance</h3><p>Use the tracking helper below to open the selected carrier's tracking page.</p></article>
+<article class="card"><div class="icon">🏢</div><h3>Business Shipments</h3><p>Enquire about recurring courier requirements for offices and online sellers.</p></article>
+</div></div></section>
+<section class="pale" id="booking"><div class="wrap"><div class="head"><div class="kicker">Quick enquiry</div><h2>Book a courier / request a quote</h2><p>Fill in the details below. Your enquiry will be prepared in WhatsApp so you can review and send it to us.</p></div>
+<div class="two"><div class="panel"><h3>Shipment details</h3><p class="intro">Please provide the basic details to help us estimate the right service.</p>
+<form id="bookingForm">
+<div class="field"><label for="customer">Your name *</label><input id="customer" required placeholder="Enter your full name"></div>
+<div class="field"><label for="phone">Your mobile number *</label><input id="phone" required inputmode="tel" placeholder="10-digit mobile number"></div>
+<div class="field"><label for="service">Service required *</label><select id="service" required><option value="">Choose a service</option><option>Domestic Courier</option><option>International Courier</option><option>Air Cargo</option><option>Sea Cargo</option><option>Business / Bulk Shipment</option><option>Need help choosing</option></select></div>
+<div class="field"><label for="origin">Pickup city / PIN code *</label><input id="origin" required placeholder="Where is the parcel being sent from?"></div>
+<div class="field"><label for="destination">Destination city / country *</label><input id="destination" required placeholder="Where should it go?"></div>
+<div class="field"><label for="weight">Approx. weight (optional)</label><input id="weight" placeholder="e.g. 2 kg"></div>
+<div class="field"><label for="notes">Parcel details (optional)</label><textarea id="notes" placeholder="Package size, type of item, preferred service, etc."></textarea></div>
+<button class="btn full" type="submit">Send Enquiry on WhatsApp ↗</button>
+<p class="formnote">This form does not charge you or create a confirmed booking. The details open in WhatsApp for you to review and send. Final price and booking are confirmed by our team.</p>
+</form></div>
+<div class="panel"><h3>What happens next?</h3><p class="intro">Simple steps to get a quote.</p><div class="card" style="margin-bottom:12px"><h3>1. Share details</h3><p>Enter pickup, destination, service and approximate weight.</p></div><div class="card" style="margin-bottom:12px"><h3>2. We review your enquiry</h3><p>Our team can check service availability and discuss the applicable rates.</p></div><div class="card"><h3>3. Confirm before dispatch</h3><p>Wait for confirmation of price, paperwork and service before handing over the parcel.</p></div></div></div></div></section>
+<section id="tracking"><div class="wrap"><div class="head"><div class="kicker">Shipment help</div><h2>Track your shipment</h2><p>Enter your AWB number, choose the courier printed on your receipt, and continue to that courier's official tracking page.</p></div><div class="two"><div class="panel"><h3>Quick tracking</h3><p class="intro">For accurate results, select the same courier company shown on your receipt. Tracking numbers alone cannot always identify the courier reliably.</p><form id="trackingForm"><div class="field"><label for="trackingNumber">Tracking / AWB number *</label><input id="trackingNumber" required autocomplete="off" placeholder="Enter tracking number / AWB"></div><div class="field"><label for="carrier">Courier partner *</label><select id="carrier" required><option value="">Choose courier company</option><option value="dtdc">DTDC</option><option value="bluedart">Blue Dart</option><option value="delhivery">Delhivery</option><option value="dhl">DHL</option><option value="fedex">FedEx</option><option value="aramex">Aramex</option><option value="trackon">Trackon</option><option value="professional">The Professional Couriers</option><option value="shreemaruti">Shree Maruti</option></select></div><button type="submit" class="btn full">Track Shipment ↗</button><p class="formnote">We’ll open the courier’s official tracking page. Some carriers may ask you to enter or confirm the AWB again on their website. Vision Express Worldwide does not display live tracking status directly.</p></form></div><div class="panel"><h3>Not sure which courier?</h3><p class="intro">Check the booking receipt, SMS or parcel label for the courier name. If you still need help, contact us on WhatsApp and we’ll guide you.</p><a class="btn full" target="_blank" rel="noopener" href="https://wa.me/918750665836?text=Hello%20Vision%20Express%20Worldwide%2C%20I%20need%20help%20identifying%20the%20courier%20for%20my%20tracking%20number.">Get Tracking Help on WhatsApp ↗</a><p class="formnote">For your privacy, avoid sharing tracking numbers publicly.</p></div></div></div></section>
+<section id="partners" class="pale"><div class="wrap"><div class="head"><div class="kicker">Our network</div><h2>Courier partners</h2><p>Availability depends on route, shipment type and partner service terms. Contact us to confirm before booking.</p></div><div class="partners"><span class="partner">DHL</span><span class="partner">FedEx</span><span class="partner">Aramex</span><span class="partner">Blue Dart</span><span class="partner">Delhivery</span><span class="partner">DTDC</span><span class="partner">Trackon</span><span class="partner">The Professional</span><span class="partner">Shree Maruti</span><span class="partner">Other available partners</span></div><p class="formnote" style="text-align:center">Partner names are shown for informational purposes. Third-party trademarks belong to their respective owners; availability should be confirmed.</p></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="head"><div class="kicker" style="color:#ffd43b">Get in touch</div><h2>Let's move your shipment.</h2><p>Contact us for rates, service availability and shipment guidance.</p></div><div class="contactgrid"><div class="contactbox"><h3>Contact Details</h3><div class="line"><strong>Contact Person</strong>Robin Mishra</div><div class="line"><strong>Mobile Number</strong><a href="tel:+918750665836">+91 87506 65836</a></div><div class="line"><strong>Email</strong><a href="mailto:visionexpressworldwide@gmail.com">visionexpressworldwide@gmail.com</a></div><div class="line"><strong>Address</strong>Sector 18, Gurgaon, Haryana</div><div class="actions"><a class="btn" href="https://wa.me/918750665836?text=Hello%20Vision%20Express%20Worldwide" target="_blank" rel="noopener">WhatsApp Us</a><a class="btn outline" href="tel:+918750665836">Call Now</a></div></div><div class="contactbox"><h3>Business Information</h3><div class="line"><strong>Business Name</strong>Vision Express Worldwide</div><div class="line"><strong>GSTIN</strong>06HFDPD4132K1ZM</div><div class="line"><strong>Service</strong>Domestic & International Courier Cargo</div><p class="tiny">Please confirm rates, pickup arrangements, documentation and delivery estimates with our team before dispatch.</p></div></div></div></section>
+</main><footer><div class="foot"><span>© <span id="year"></span> Vision Express Worldwide. All rights reserved.</span><span>Courier • Cargo • Logistics</span></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('bookingForm').addEventListener('submit',function(e){e.preventDefault();const val=id=>document.getElementById(id).value.trim();const msg=`Hello Vision Express Worldwide, I would like a courier quote.\\nName: ${val('customer')}\\nMobile: ${val('phone')}\\nService: ${val('service')}\\nPickup: ${val('origin')}\\nDestination: ${val('destination')}\\nApprox. weight: ${val('weight')||'Not provided'}\\nParcel details: ${val('notes')||'Not provided'}\\nPlease share availability and charges.`;window.open('https://wa.me/918750665836?text='+encodeURIComponent(msg),'_blank','noopener');});
+document.getElementById('trackingForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const awb=document.getElementById('trackingNumber').value.trim();
+ const carrier=document.getElementById('carrier').value;
+ if(!awb){alert('Please enter your tracking / AWB number.');return;}
+ if(!carrier){alert('Please choose the courier company printed on your receipt.');return;}
+ const encoded=encodeURIComponent(awb);
+ const routes={
+  dtdc:'https://www.dtdc.com/track-your-shipment/',
+  bluedart:'https://www.bluedart.com/web/guest/trackdartresult?awb='+encoded+'&trackFor=awb',
+  delhivery:'https://www.delhivery.com/tracking',
+  dhl:'https://www.dhl.com/global-en/home/tracking.html?tracking-id='+encoded,
+  fedex:'https://www.fedex.com/fedextrack/?trknbr='+encoded,
+  aramex:'https://www.aramex.com/track/results?ShipmentNumber='+encoded,
+  trackon:'https://trackon.in/',
+  professional:'https://www.tpcindia.com/',
+  shreemaruti:'https://shreemaruticourier.com/'
+ };
+ const url=routes[carrier];
+ if(!url){alert('Please choose a courier company.');return;}
+ window.open(url,'_blank','noopener,noreferrer');
+});
+</script>
+</body></html>
